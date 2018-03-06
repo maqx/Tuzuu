@@ -1,0 +1,154 @@
+@import url("../../common/less/mixins.less");
+.view {
+  background: url(../../../static/images/FWZ_login@2X.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: @pageWidth;
+  height: 690px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  .main-box {
+    margin-top: 75px;
+    width: 480px;
+    height: 540px;
+    background: rgba(255, 255, 255, 0.7);
+    overflow: hidden;
+    .radius();
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      font-weight: 500;
+      height: 75px;
+      line-height: 75px;
+      border-bottom: 1px solid @border_color;
+      color: #666;
+    }
+    h3 {
+      display: flex;
+      font-size: 22px;
+      margin-top: 36px;
+      margin-bottom: 20px;
+      color: @color_green;
+      .iconfont {
+        font-size: 24px;
+        margin-top: 4px;
+      }
+    }
+    .box-padding {
+      padding: 0 35px;
+      width: 410px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .input_box {
+      height: 84px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: flex-start;
+      .red_border {
+        border-color: @color_red;
+      }
+      .box {
+        display: flex;
+        align-items: center;
+        width: 410px;
+        position: relative;
+        .iconfont {
+          position: absolute;
+          left: 10px;
+        }
+        #getCode{
+          width: 122px;
+          margin-left: 10px;
+          font-size: 14px;
+        }
+        .code{
+          width: 282px;
+        }
+
+      }
+      input {
+        background-color: @color_white;
+        padding-left: 35px;
+        width: 410px;
+        height: 51px;
+        font-size: 14px;
+        border: 1px solid @border_color;
+        .radius();
+        &:focus {
+          border: 1px solid @color_green;
+        }
+      }
+      .green-btn {
+        display: flex;
+        justify-content: center;
+        background: @color_green;
+        color: @color_white;
+        padding: 0;
+        height: 55px;
+        font-size: 24px;
+        outline: none;
+        cursor: pointer;
+      }
+      .iconfont {
+        font-size: 20px;
+        color: @color_green;
+      }
+      .err-msg {
+        color: #ff4337;
+        font-size: 14px;
+        width: 395px;
+        line-height: 30px;
+        text-align: left;
+        .iconfont {
+          font-size: 16px;
+          color: @color_red;
+        }
+      }
+    }
+    .back-login{
+      cursor: pointer;
+      color: @color_green;
+      text-align: center;
+      font-size: 18px;
+      .iconfont{
+        margin-left: 14px;
+        font-size: 18px;
+      }
+    }
+    .password-tip {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      margin-bottom: 50px;
+      .checkbox {
+        display: inline-block;
+        margin: 0!important;
+        position: relative;
+
+        .el-checkbox__inner{
+          border:1px solid @color_green;
+          width: 16px;
+          height: 16px;
+        }
+        .el-checkbox__input.is-checked .el-checkbox__inner{
+          background-color: @color_green;
+        }
+      }
+      .unchecked span {
+        color: rgba(255, 67, 55, 0);
+      }
+      #reset_pwd {
+        color: #00bfa5;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.el-checkbox__inner::after{
+  border:2px solid @color_green;
+}

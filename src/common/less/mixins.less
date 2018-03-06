@@ -1,0 +1,240 @@
+@body_bg: #f5f5f5;
+@title_txt1: #000000;
+@title_txt2: #292626;
+@label_bg: #fbfbfb;
+@list_title: #afecf3;
+@color_green: #10b0c3;
+@color_red: #ff594e;
+@color_white: #ffffff;
+@gray_txt: #ccc;
+@gray_txt1: #666;
+@gray_txt2:#aaa;
+@border_color: #dadadd;
+@boxBorder: 1px solid @border_color;
+@pageWidth: 1000px;
+@pageHeight:740px;
+@leftWidth:150px;
+@rightWidth:828px;
+@list_title_color:#edfbf5;
+@font-color: #666;
+@top-tab-bg:#fbfbfb;
+@color_gray:#808080;
+@tap_font_color:#717171;
+ol,
+ul,h2,p {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+h2{
+  color:@title_txt1;
+  font-size: 24px;
+  margin-bottom: 14px;
+  text-align: left;
+}
+select{
+  display: inline-block;
+  height: 30px;
+  outline: none;
+  border:@boxBorder;
+  font-size: 16px;
+  padding-right: 14px;
+  text-indent: 10px;
+  /*很关键：将默认的select选择框样式清除*/
+  //appearance:none;
+  //-moz-appearance:none;
+  //-webkit-appearance:none;
+  option{
+    text-indent: 10px;
+    color: @color_gray;
+  }
+  option:hover {
+    background-color: #f80;
+    color: #fff;
+  }
+}
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+select::-ms-expand {
+  display: none;
+}
+
+input{
+  outline:none;
+  border: none;
+
+}
+h1,h2,h3,h4{
+  font-weight: 100;
+}
+.shadow(@args:~"0 0 10px #d2d1d6") {
+  box-shadow: @args;
+  -webkit-box-shadow: @args;
+  -moz-box-shadow: @args;
+  -ms-box-shadow: @args;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+}
+.radius(@rd: 5px) {
+  border-radius: @rd;
+  -webkit-border-radius: @rd;
+  -moz-border-radius: @rd;
+  -ms-border-radius: @rd;
+}
+.rotate(@deg:0deg) {
+  transform: rotate(@deg);
+  -webkit-transform: rotate(@deg);
+  -moz-transform: rotate(@deg);
+  -ms-transform: rotate(@deg);
+}
+.scale(@s: .8) {
+  transform: scale(@s);
+  -webkit-transform: scale(@s);
+  -moz-transform: scale(@s);
+  -ms-transform: scale(@s);
+}
+.transition(@property: all, @duration: 1s, @timing: ease) {
+  transition: @arguments;
+  -moz-transition: @arguments;
+  -webkit-transition: @arguments;
+  -o-transition: @arguments;
+}
+.opacity(@op:0.5) {
+  @op1: (@op*100);
+  filter:alpha(opacity=@op1);
+  -moz-opacity: @op;
+  -khtml-opacity: @op;
+  opacity: @op;
+  -webkit-opacity: @op;
+}
+.flex() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.ellipsis() {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.date-panel{
+  background-color: @body_bg;
+}
+.displayFlex(){
+  display: flex;
+  align-items: center;
+}
+.red-txt{
+  color: @color_red;
+}
+.green-txt{
+  color: @color_green;
+}
+.gray-txt{
+  color: @gray_txt;
+}
+.gray-txt2{
+  color: @gray_txt2;
+}
+.gray-txt1{
+  color: @gray_txt1;
+}
+.title-txt{
+  color: @title_txt2;
+}
+.link-txt{
+  color: @title_txt2;
+  text-decoration: none;
+}
+.green_btn{
+  background-color: @color_green;
+  .radius(@rd: 5px);
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  color:@color_white;
+  outline-color:@color_green;
+}
+.gray_btn{
+  background-color: #cccccc;
+  color:@color_white;
+  .radius(@rd: 5px);
+}
+.back_btn{
+  width: 140px;
+  height: 40px;
+  font-weight: 600;
+  font-size: 22px;
+  margin: 24px 0;
+  position: relative;
+  left: 860px;
+}
+.font-size-12{
+  font-size: 12px;
+}
+.font-size-14{
+  font-size: 14px;
+}
+.font-size-16{
+  font-size: 16px;
+}
+.font-size-18{
+  font-size: 18px;
+}
+.font-size-20{
+  font-size: 20px;
+}
+.font-size-22{
+  font-size: 22px;
+}
+.font-size-24{
+  font-size: 24px;
+}
+.font-size-28{
+  font-size: 28px;
+}
+.list-title{
+  background-color: #edfbf5;
+  line-height: 30px;
+  color: #666;
+  font-size: 14px;
+  border-bottom: 1px solid #dadadd;
+}
+.borderBox(){
+  border: 1px solid #dadadd;
+  .radius(@rd: 5px);
+  background: #fff;
+  padding: 15px 35px;
+  display: inline-block;
+  vertical-align: top;
+}
+.no-order{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  color: #7d7c7c;
+  font-size: 20px;
+  .pic{
+    background:url("/static/images/noorder.png");
+    width: 80px;
+    height: 100px;
+    background-repeat: no-repeat;
+    margin-top: 65px;
+    display: block;
+    margin-left: e("calc(50% - 40px)");
+  }
+  h3{
+    display: block;
+  }
+}
+.page{
+ position: absolute;
+  bottom: 8px;
+  right: 10px;
+  z-index: 99999;
+}
+

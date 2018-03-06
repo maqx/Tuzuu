@@ -1,0 +1,70 @@
+@import "mixins";
+// 字体文件
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1;
+  background: @body_bg;
+  font:16px "Microsoft Yahei",Tahoma, Helvetica, Arial, "SimSun", sans-serif;
+}
+
+@font-face {font-family: "iconfont";
+  src: url('../fonts/iconfont.eot?t=1479977183'); /* IE9*/
+  src: url('../fonts/iconfont.eot?t=1479977183#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/iconfont.woff?t=1479977183') format('woff'), /* chrome, firefox */
+  url('../fonts/iconfont.ttf?t=1479977183') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../fonts/iconfont.svg?t=1479977183#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  //-webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-top-san:before { content: "\e600"; }
+.icon-logo:before { content: "\e64a"; }
+.icon-search:before{content: '\e674';}
+.icon-tel:before{content: '\e63c'}
+.icon-user:before{content: '\e639'}
+.icon-mobile:before{content: '\e63a'}
+.icon-lock:before{content: '\e63b'}
+.icon-err:before{content: '\e63d'}
+.icon-back:before{content: '\e643'}
+.icon-bottom:before{content: '\e630'}
+.icon-index:before{content: '\e649'}
+.icon-order:before{content: '\e648'}
+.icon-qd:before{content: '\e646'}
+.icon-financial:before{content: '\e644'}
+.icon-center:before{content: '\e64b'}
+.icon-quit:before{content: '\e66a'}
+.icon-user_1:before{content: '\e669'}
+.icon-right-san:before{content: '\e675'}
+.icon-left-san:before{content: '\e676'}
+.icon-timer:before{content: '\e63e'}
+.icon-close:before{content: '\e616'}
+
